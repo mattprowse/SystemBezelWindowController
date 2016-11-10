@@ -10,6 +10,11 @@
 		F16CBE411DD5367700837306 /* SystemBezelWindowController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16CBE371DD5367700837306 /* SystemBezelWindowController.framework */; };
 		F16CBE461DD5367700837306 /* SystemBezelWindowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CBE451DD5367700837306 /* SystemBezelWindowControllerTests.swift */; };
 		F16CBE481DD5367700837306 /* SystemBezelWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = F16CBE3A1DD5367700837306 /* SystemBezelWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F16CBE551DD536A400837306 /* NSImage+SystemBezelWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CBE511DD536A400837306 /* NSImage+SystemBezelWindow.swift */; };
+		F16CBE561DD536A400837306 /* NSVisualEffectView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F16CBE521DD536A400837306 /* NSVisualEffectView+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F16CBE571DD536A400837306 /* SystemBezelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CBE531DD536A400837306 /* SystemBezelWindowController.swift */; };
+		F16CBE581DD536A400837306 /* SystemBezelWindowLevelIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CBE541DD536A400837306 /* SystemBezelWindowLevelIndicator.swift */; };
+		F16CBE5A1DD53FEF00837306 /* NSAppearance+UserInterfacePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CBE591DD53FEF00837306 /* NSAppearance+UserInterfacePreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		F16CBE401DD5367700837306 /* SystemBezelWindowControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SystemBezelWindowControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16CBE451DD5367700837306 /* SystemBezelWindowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemBezelWindowControllerTests.swift; sourceTree = "<group>"; };
 		F16CBE471DD5367700837306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16CBE511DD536A400837306 /* NSImage+SystemBezelWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+SystemBezelWindow.swift"; sourceTree = "<group>"; };
+		F16CBE521DD536A400837306 /* NSVisualEffectView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSVisualEffectView+Private.h"; sourceTree = "<group>"; };
+		F16CBE531DD536A400837306 /* SystemBezelWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemBezelWindowController.swift; sourceTree = "<group>"; };
+		F16CBE541DD536A400837306 /* SystemBezelWindowLevelIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemBezelWindowLevelIndicator.swift; sourceTree = "<group>"; };
+		F16CBE591DD53FEF00837306 /* NSAppearance+UserInterfacePreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAppearance+UserInterfacePreferences.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 		F16CBE391DD5367700837306 /* SystemBezelWindowController */ = {
 			isa = PBXGroup;
 			children = (
+				F16CBE531DD536A400837306 /* SystemBezelWindowController.swift */,
+				F16CBE541DD536A400837306 /* SystemBezelWindowLevelIndicator.swift */,
+				F16CBE591DD53FEF00837306 /* NSAppearance+UserInterfacePreferences.swift */,
+				F16CBE511DD536A400837306 /* NSImage+SystemBezelWindow.swift */,
+				F16CBE521DD536A400837306 /* NSVisualEffectView+Private.h */,
 				F16CBE3A1DD5367700837306 /* SystemBezelWindowController.h */,
 				F16CBE3B1DD5367700837306 /* Info.plist */,
 			);
@@ -94,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16CBE481DD5367700837306 /* SystemBezelWindowController.h in Headers */,
+				F16CBE561DD536A400837306 /* NSVisualEffectView+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +164,7 @@
 				TargetAttributes = {
 					F16CBE361DD5367700837306 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = N87J278237;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					F16CBE3F1DD5367700837306 = {
@@ -198,6 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16CBE5A1DD53FEF00837306 /* NSAppearance+UserInterfacePreferences.swift in Sources */,
+				F16CBE581DD536A400837306 /* SystemBezelWindowLevelIndicator.swift in Sources */,
+				F16CBE551DD536A400837306 /* NSImage+SystemBezelWindow.swift in Sources */,
+				F16CBE571DD536A400837306 /* SystemBezelWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,10 +339,11 @@
 		F16CBE4C1DD5367700837306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N87J278237;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -333,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cordlessdog.SystemBezelWindowController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,10 +362,11 @@
 		F16CBE4D1DD5367700837306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N87J278237;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -361,6 +384,7 @@
 		F16CBE4F1DD5367700837306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = N87J278237;
 				INFOPLIST_FILE = SystemBezelWindowControllerTests/Info.plist;
@@ -374,6 +398,7 @@
 		F16CBE501DD5367700837306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = N87J278237;
 				INFOPLIST_FILE = SystemBezelWindowControllerTests/Info.plist;

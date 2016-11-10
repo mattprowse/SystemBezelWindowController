@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NSVisualEffectView+Private.h"
 
 //! Project version number for SystemBezelWindowController.
 FOUNDATION_EXPORT double SystemBezelWindowControllerVersionNumber;
